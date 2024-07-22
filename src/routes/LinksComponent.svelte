@@ -8,6 +8,9 @@
 <div class="links" class:active>
     {#each links as link}
         <a href={link.url} title={link.title} target="_blank" class="link">
+                {#if link.ico}
+                <span class="linkico"><img src={link.ico} alt='icone for link {link.title}' width="32" height="32"/></span>
+                {/if}
                 <span class="linktitle">{link.title}</span>
                 <span class="linkdesc">{link.desc?" : " +link.desc:""}</span>
                 {#if link.tags && link.tags.length > 0}
@@ -46,6 +49,10 @@ a, a:focus, a:hover, a:visited{
 }
 .link:hover{
     border: 1px solid #555;
+}
+.linkico{
+    float: left;
+    margin-right: 12px;
 }
 .linktitle{
     font-weight: bold;
