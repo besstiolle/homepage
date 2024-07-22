@@ -74,15 +74,15 @@
             return
         }
         
-        let o:Record<string,any>
+        let homepageToSave:Homepage
         try{
-            o = parse(value) as Homepage
+            homepageToSave = parse(value) as Homepage
         } catch (e:any){
             showError("La configuration n'est pas compatible TOML", e.message)
             return
         }
 
-        control(o).then(response =>{
+        control(homepageToSave).then(response =>{
             if(response === ""){
                 //Message de succcès
                 successTitle = "Configuration sauvegardée"
@@ -90,6 +90,8 @@
                 setTimeout(function(){
                     successShow = false
                 }, 2000);
+                //Sauvegarde effective
+                $jsonHomepageDataStore = homepageToSave
                 return
             } else {
                 showError(response)

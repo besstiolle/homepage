@@ -1,0 +1,39 @@
+# Mandatory : the title of the board
+title = "Mon super board"
+# Optionnal : the default background color
+#bgcolor = "#FFF"
+# Optionnal : the default background image
+bgimg = "defaultBg.avif"
+# Licence : https://unsplash.com/fr/photos/montagnes-sous-la-nuit-etoilee-850jTF12RSQ
+
+[[tabs]]
+    title = "Un premier onglet"
+    desc = "Les liens les plus importants"
+    [[tabs.links]]
+        title="blog"
+        desc="Pour creuser le self hosting"
+        url="https://kdanezis.fr/tags/self-hosting/"
+    [[tabs.links]]
+        title="Mail"
+        url="https://mail.proton.me/u/0/inbox"
+    [[tabs.links]]
+        title="Zenika"
+        url="https://zenika.com/"
+    [[tabs.links]]
+        title="Homepage Github"
+        url="https://github.com/besstiolle/homepage"
+
+[[tabs]]
+    title = "Le second onglet"
+    [[tabs.links]]
+        title="Framasoft"
+        url="https://framasoft.org/fr/"
+    [[tabs.links]]
+        title="Logseq"
+        url="https://logseq.com/"
+    [[tabs.links]]
+        title="Firefox"
+        url="https://www.mozilla.org/fr/firefox/new/"
+    [[tabs.links]]
+        title="Debian"
+        url="https://www.debian.org/index.fr.html"

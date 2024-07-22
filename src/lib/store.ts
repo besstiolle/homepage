@@ -11,10 +11,10 @@ let storedHomepage:Homepage = new Homepage("Default Title")
 if(isBrowser){
     let localData = readHomepageData()
     if(localData !== null){
-        console.info("local")
+        console.debug("local")
         storedHomepage = localData
     } else {
-        console.info("example")
+        console.debug("example")
         storedHomepage = examplesLinks
     }
 }
