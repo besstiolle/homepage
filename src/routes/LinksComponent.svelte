@@ -7,7 +7,7 @@
 
 <div class="links" class:active>
     {#each links as link}
-        <a href={link.url} title={link.title} target="_blank"><span class="link" >
+        <a href={link.url} title={link.title} target="_blank" class="link">
                 <span class="linktitle">{link.title}</span>
                 <span class="linkdesc">{link.desc?" : " +link.desc:""}</span>
                 {#if link.tags && link.tags.length > 0}
@@ -17,7 +17,7 @@
                         {/each}
                     </span>
                 {/if}
-        </span></a>
+        </a>
     {/each}
 </div>
 
@@ -28,16 +28,19 @@ a, a:focus, a:hover, a:visited{
 }
 .links{
     display: none;
+    flex-wrap: wrap;
 }
 .active{
-    display: block;
+    display: flex;
 }
 .link{
-    display: inline-block;
-    width: 19%;
+    flex-basis: 200px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-content:center;
     background-color: rgba(0,0,0,0.5);
-    padding: 2%;
-    margin: 2% 5%;
+    padding: 1%;
+    margin: 2% 2%;
     border: 1px solid transparent;
     min-height: 2em;
 }

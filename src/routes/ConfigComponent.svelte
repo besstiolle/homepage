@@ -155,14 +155,17 @@
     display: block;
 }
 .action{
-    margin: 1em 0;
+    flex-wrap: wrap;
+    display: flex;
 }
 input{
-  display: inline-block;
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
   background-color: rgba(24, 48, 60, 0.5);
-  padding: 1em;
-  margin: 0 1em;
-  font-size: 0.7em;
+  padding: 1%;
+  margin: 1% 1% 0 0;
+  font-size: 0.9em;
   border:none;
   cursor: pointer;
   color: #FFF;
@@ -180,6 +183,7 @@ input:enabled:hover{
 }
 textarea{
     width: 900px;
+    max-width: 100%;
     height: 400px;
     white-space: pre;
 }
